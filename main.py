@@ -5,7 +5,6 @@ import numpy as np
 
 def main():
     data = np.loadtxt(args.file_location, dtype=np.float32)
-    classes = np.unique(data[:,-1]) ## list of all classes in dataset
 
     garph = Graph(args.graph_location, data)
     garph.close()
