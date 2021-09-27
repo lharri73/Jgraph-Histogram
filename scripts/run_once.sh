@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-python main.py data/test3.txt graphs/test.jgr --nbins 20
+python main.py $1 graphs/test.jgr
 scp graphs/test.jgr hydra:~/Documents
 read
 scp hydra:~/Documents/test1.jpg graphs/

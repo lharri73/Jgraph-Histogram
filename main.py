@@ -1,4 +1,4 @@
-from graph import Graph
+from lib.graph import Graph
 import sys
 from argparse import ArgumentParser
 import numpy as np

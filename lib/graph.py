@@ -2,6 +2,10 @@ import numpy as np
 import random
 
 class HistBar:
+    """
+    Class used to represent a single histogram bar. The transpose option 
+    is used to plot the x-axis histogram.
+    """
     def __init__(self, start, height, left, right, color, transpose=False):
         self.height = height
         self.start = start
@@ -61,7 +65,7 @@ class Graph:
             self._write(f'\tlabel : class = {int(cls):d}')
             self._write('\tpts')
             for point in points:
-                self._write(f'\t{point[0]:+20.4f} {point[1]:+20.4f}')
+                self._write(f'\t{point[0]:20.4f} {point[1]:20.4f}')
 
     def create_histograms(self, xRange, yRange):
         self._write('\n(* x histogram *)')
@@ -69,7 +73,7 @@ class Graph:
 
         self._write('\ty_translate 3.25')
         self._write('\txaxis hash 0 mhash 0')
-        tmp = " "*30
+        tmp = " "*30 ## placeholder text. the max value should be no longer than 30 chars
         self.file.write("\tyaxis size 1.5 min 0 max ")
         xaxisLoc = self.file.tell()
         self._write(tmp)
