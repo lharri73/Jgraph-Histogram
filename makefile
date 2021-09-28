@@ -5,6 +5,7 @@ GRAPHS = jgraphs/normal3.jgr \
 		 jgraphs/random2_20-10.jgr
 
 FINAL = $(GRAPHS:.jgr=.jpg)
+JGRAPH = /home/jplank/bin/LINUX/jgraph
 
 all: folders $(FINAL)
 
@@ -33,7 +34,7 @@ jgraphs/random2_20-10.jgr:
 	python main.py data/random2_20-10.txt $@ --nbins 20
 
 %.jpg: %.jgr
-	/home/jplank/bin/LINUX/jgraph -P $*.jgr | ps2pdf - | convert -density 300 - -quality 100 $<.jpg
+	$(JGRAPH) -P $*.jgr | ps2pdf - | convert -density 300 - -quality 100 $<.jpg
 	mv $<.jpg graphs
 
 .PHONY: all clean

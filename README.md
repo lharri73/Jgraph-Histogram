@@ -30,7 +30,7 @@ As a ridiculous example, Using 30 classes, each with 100 points (30,000 points t
 
 ## Running For Yourself
 This utility utilizes Python (don't hate me). The only packaged leveraged is the numpy, a package installed in nearly every
-environment. If it's not, simply run `pip install numpy` and you're good to go. 
+environment (including the EECS Hydras). If it's not, simply run `pip install numpy` and you're good to go. 
 
 Included is a Makefile that will generate random data from a variety of distributions and create pretty graphs. 
 Specifically, it will create 5 graphs with the following conditions:
