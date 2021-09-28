@@ -20,7 +20,6 @@ at random, from a set of various types of random distributions, and generate
 a specified number of classes and points in the same way that `normal_data_maker.py` does. The difference is that each *class* has a different
 random distribution (normal, logistic, laplacian, etc.). 
 
-
 ## Examples
 
 Using 3 classes, each with 10 points and a normal distribution:
